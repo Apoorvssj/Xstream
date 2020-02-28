@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('#side-bar-toggle').on('click',function(e){
         $('#side-bar-toggle').addClass('change');
     
-        $('.navigation-bar').css('width','150px');
+        $('.navigation-bar').css('width','350px');
     })
     $('.navigation-bar').on('mouseleave',function(){
         $('#side-bar-toggle').removeClass('change');
@@ -31,6 +31,19 @@ $(document).ready(function(){
     
     //         $('.'+g).removeClass('animate');
     //     });
-    // }); 
+    // });
+    function expand() {
+          $(".search").toggleClass("close");
+          $(".input").toggleClass("square");
+          if ($('.search').hasClass('close')) {
+            $('input').focus();
+          } else {
+            $('input').blur();
+          }
+        }
+        $('#search-btn').on('click', expand);
+   
+    
 });
+
 
